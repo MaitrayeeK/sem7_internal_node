@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <form method="post" action="/vehicle/add" enctype="multipart/form-data">
+            Vehicle brand : <input type="text" name="brand"><br>
+            Category : <select name="category">
+            <% category.forEach(function(category) { %>
+                <option value="<%= category.name%>"><%= category.name%></option>
+            <% }); %>    
+            </select><br>
+            Picture : <input type="file" name="picture"><br>
+            Price : <input type="text" name="price"><br>
+            Depreciation : <input type="text" name="depreciation"><br>
+            Years : <input type="text" name="years"><br>
+            Total : <input type="text" name="total"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
