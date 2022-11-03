@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <h1>List</h1>
+
+        <a href="/user/add_vehicle">Add New</a>
+        <table border="1">
+            <tr><th>Brand</th><th>Category</th><th>Image</th><th>Price</th><th>Depreciation</th><th>Years</th><th>Total</th></tr>
+            <% vehicle.forEach(function(user) { %>
+                <tr>
+                    <td><%= user.brand%></td>
+                    <td><%= user.category%></td>
+                    <td><img src="../<%= user.picture%>" width="200"></td>
+                    <td><%= user.price%></td>
+                    <td><%= user.depreciation%></td>
+                    <td><%= user.years%></td>
+                    <td><%= user.total%></td>
+                </tr>
+            <% }); %>    
+        </table>
+    </body>
+</html>
